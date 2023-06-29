@@ -1,15 +1,4 @@
-//TODO make city, state and country be given by user input
-var city = "Viseu"; // City name
-var state = ""; // State code (only for the US)
-var country = "620"; // ISO 3166 country codes
-
-fetchCoordsOfCity(city, state, country)
-  .then((coords) => {
-    const { lat, lon } = coords;
-    fetchWeatherOfCoords(lat, lon);
-  })
-  .catch((error) => console.log('ERROR', error));
-
+// Description: This file contains the functions that make the API calls to the OpenWeatherMap API
 function fetchCoordsOfCity(city, state, country) {
   var requestOptions = {
     method: 'GET',
@@ -38,6 +27,6 @@ function fetchWeatherOfCoords(lat, lon) {
 
   fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=metric&appid=6f02f16fbb21d6c9f5b0d019e62daf21", requestOptions)
     .then(response => response.json())
-    .then(result => console.log(result)) // TODO here it gives me the weather info. Later display info in the website
+    .then(result => displayWeatherInfo(result))
     .catch(error => console.log('error', error));
 }
