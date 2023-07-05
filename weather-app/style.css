@@ -1,1 +1,43 @@
 /* TODO make website look nice */
+body {
+    background-color: #65bbff;
+    
+}
+
+#cityForm {
+    position: relative;
+    left: 2%;
+    border: 1px solid black;
+    width: 96%;
+    height: 200px;
+}
+
+
+#display {
+    position: relative;
+    height: auto;
+    width: 96%;
+    bottom: 0;
+    left: 2%;
+    border: 1px solid black;
+    margin-top: 10px;
+    text-align: center;
+}
+
+input {
+    height: 20px;
+    width: 96%;
+    display: block; 
+    margin: 0 auto; 
+}
+
+#submit {
+    height: 25px;
+    margin-top: 10px;
+    /* minimum width of 50 px and max of 200px */
+    width: auto; 
+}
+
+label {
+    margin-left: 2%;
+}

@@ -20,17 +20,19 @@
 <body>
     <div>
         <form id="cityForm" >
-            <label for="city">City name</label>
-            <input type="text" name="city" id="city">
-            <label for="state">State code (only for the US)</label>
-            <input type="text" name="state" id="state">
-            <label for="country">ISO 3166 country codes</label>
-            <input type="text" name="country" id="country">
-            <input type="button" value="Submit" onclick="getCity()">
+            <p><label for="city">City name</label></p>
+            <p><input type="text" name="city" id="city"></p>
+            <p>
+                <label for="country">ISO 3166 country codes
+                    <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes"
+                target="_blank" rel="noopener noreferrer">(list here)</a>
+                </label>
+            </p>
+            <p><input type="text" name="country" id="country"></p>            
+            <p><input id="submit" type="button" value="Submit" onclick="getCity()"></p>
         </form>
         <div id="display"></div>
     </div>
-    <script src="apiCall.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
